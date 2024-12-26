@@ -1,10 +1,7 @@
 <script lang="ts">
     import Cart from "./Cart.svelte";
+    let { price, img, name, description, buy } = $props();
 
-    export let name: string | null = null;
-    export let price: number | null = null;
-    export let img: string | null = null;
-    export let description: string | null = null;
 </script>
 
 <div class="w-36 h-56 flex flex-col overflow-hidden">
@@ -13,7 +10,9 @@
     </div>
     <div class="flex pt-4 items-end justify-between">
         <p class="font-bold text-lg">{price} Δ</p>
-        <Cart width={40}/>
+        <button onclick={buy}>
+            <Cart width={40}/>
+        </button>
     </div>
     <hr>
     <div>

@@ -1,7 +1,8 @@
 <script lang="ts">
-	export let name: string | null = null;
-	export let id: number | null = null;
-	export let balance: number | null = null;
+	let { user } = $props();
+	let name = user.name;
+	let id = user.id;
+	let balance = user.balance;
 </script>
 
 <div class="bg-primary-700 flex h-full w-96 flex-col rounded-3xl p-4 text-2xl font-bold text-white">

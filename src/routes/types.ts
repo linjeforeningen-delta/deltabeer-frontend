@@ -4,3 +4,9 @@ export interface Item {
 	img: string;
 	description: string;
 }
+
+export interface User {
+	name: string,
+	balance: number,
+	id: number,
+}

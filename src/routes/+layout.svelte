@@ -4,7 +4,7 @@
 
 	import Navbar from '../lib/components/Navbar.svelte';
 
-	let elements = ['shop', 'deposit', 'login'];
+	let elements = ['deposit', 'login'];
 </script>
 
 <div class="">
