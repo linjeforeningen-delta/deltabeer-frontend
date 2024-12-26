@@ -62,11 +62,12 @@
 		}
 	];
 
-	let user: User | null = $state(null);
+	let user: User | undefined = $state();
 	let input_id: number | null = $state(null);
 
 	function findUserById() {
 		const user_object = users.find(user => user.cardId === input_id) || null;
+		if (!user_object) return;
 		if (user_object) {
 			user = {
 				name: user_object.firstName + " " + user_object.lastName,
