@@ -3,11 +3,11 @@
 > Web application used as a interface to add founds, and buy products from the Delta Store.
 
 ## TODO
-[ ] - Add a way to add founds to the user account
-[ ] - Update user balance after buying a product
-[ ] - POST request if enough balance to remove amount from DB.
-[ ] - Deny purchase if user balance is not enough
-[ ] - User transaction history?
+- [ ] Add a way to add founds to the user account
+- [ ] Update user balance after buying a product
+- [ ] POST request if enough balance to remove amount from DB.
+- [ ] Deny purchase if user balance is not enough
+- [ ] User transaction history?
 
 ## Installation
 
