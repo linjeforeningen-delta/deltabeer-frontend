@@ -1,4 +1,5 @@
 # Delta Shop Frontend
+
 > Web application used as a interface to add founds, and buy products from the Delta Store.
 
 ## Installation

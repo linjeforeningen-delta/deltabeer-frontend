@@ -5,7 +5,7 @@
 	let balance = user.balance;
 </script>
 
-<div class="bg-primary-700 flex h-full w-96 flex-col rounded-3xl p-4 text-2xl font-bold text-white">
+<div class="flex h-full w-96 flex-col rounded-3xl bg-primary-700 p-4 text-2xl font-bold text-white">
 	<div>
 		Name: <span class="font-thin">{name}</span>
 		<br />

@@ -1,10 +1,10 @@
-<script lang=ts>
-	import SetUser from "$lib/components/SetUser.svelte";
-	import { createEventDispatcher } from "svelte";
-	import UserCard from "$lib/components/UserCard.svelte";
-	import type { User, Item } from "./types";
-	import ItemCard from "$lib/components/ItemCard.svelte";
-	import { onMount } from "svelte";
+<script lang="ts">
+	import SetUser from '$lib/components/SetUser.svelte';
+	import UserCard from '$lib/components/UserCard.svelte';
+	import type { User, Item } from './types';
+	import ItemCard from '$lib/components/ItemCard.svelte';
+	import { onMount } from 'svelte';
+
 
 	let error: string | null = null;
 	let users: any[] = [];
@@ -66,24 +66,29 @@
 	let input_id: number | null = $state(null);
 
 	function findUserById() {
-		const user_object = users.find(user => user.cardId === input_id) || null;
+		const user_object = users.find((user) => user.cardId === input_id) || null;
 		if (!user_object) return;
 		if (user_object) {
 			user = {
-				name: user_object.firstName + " " + user_object.lastName,
+				name: user_object.firstName + ' ' + user_object.lastName,
 				balance: user_object.creditRating,
-				id: user_object.cardId,
-			}
+				id: user_object.cardId
+			};
 		}
 	}
 
 	function resetUser() {
-		user = null
+		user = undefined;
 	}
 
 	let cart = $state();
 	console.log(cart);
 
+	function updateBalance(item: Item) {
+		if (!user) return;
+		user.balance = user.balance - item.price;
+		console.log(user.balance);
+	}
 </script>
 
 <div>
@@ -91,9 +96,19 @@
 	<div class="flex flex-col items-center pt-5">
 		{#if user}
 			<UserCard {user} />
-			<button onclick={resetUser} class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-6 my-2 rounded-l">Quit</button>
+			<button
+				onclick={resetUser}
+				class="my-2 rounded-l bg-gray-300 px-6 py-2 font-bold text-gray-800 hover:bg-gray-400"
+				>Quit</button
+			>
 		{:else}
-			<input class="rounded-lg" placeholder="UserID" bind:value={input_id} onchange={findUserById} type="number"/>
+			<input
+				class="rounded-lg"
+				placeholder="UserID"
+				bind:value={input_id}
+				onchange={findUserById}
+				type="number"
+			/>
 		{/if}
 	</div>
 
@@ -105,7 +120,7 @@
 					price={item.price}
 					description={item.description}
 					img={item.img}
-					buy={() => cart.push(item.name) // TODO:}
+					buy={() => updateBalance(item)}
 				/>
 			{/each}
 		</div>

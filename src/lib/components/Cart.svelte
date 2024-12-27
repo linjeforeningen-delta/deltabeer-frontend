@@ -1,13 +1,13 @@
 <script lang="ts">
-    export let color: string = "#005500";
-    export let width: number = 130;
-    let height: number = width * 1.2;
+	export let color: string = '#005500';
+	export let width: number = 130;
+	let height: number = width * 1.2;
 
-    let w = `${width}px`;
-    let h = `${height}px`;
+	let w = `${width}px`;
+	let h = `${height}px`;
 </script>
 
-<div class="hover:scale-105 hover:cursor-pointer pr-1">
+<div class="pr-1 hover:scale-105 hover:cursor-pointer">
 	<svg
 		fill={color}
 		height={h}
@@ -42,5 +42,4 @@
 			/>
 		</g>
 	</svg>
-
 </div>
