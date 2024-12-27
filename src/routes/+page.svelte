@@ -116,10 +116,7 @@
 		<div class="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-8 pt-10">
 			{#each store_items as item}
 				<ItemCard
-					name={item.name}
-					price={item.price}
-					description={item.description}
-					img={item.img}
+					{...item}
 					buy={() => updateBalance(item)}
 				/>
 			{/each}
