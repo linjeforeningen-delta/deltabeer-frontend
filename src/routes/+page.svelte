@@ -77,31 +77,32 @@
 		}
 	}
 
+	let history: number[] = $state([]);
+
 	function resetUser() {
 		user = undefined;
 	}
-
-	let cart = $state();
-	console.log(cart);
-
-	function updateBalance(item: Item) {
+	function undoPurchase() {
 		if (!user) return;
-		user.balance = user.balance - item.price;
-		console.log(user.balance);
+		const last_purchase = history.pop();
+		if (last_purchase !== undefined) {
+			user = {...user, balance: user.balance + last_purchase};
+		}
+	}
+
+	function buyItem(item: Item) {
+		if (!user) return;
+		user = {...user, balance: user.balance - item.price};
+		history.push(item.price);
 	}
 </script>
 
 <div>
 	<h1 class="text-4xl font-bold">Shop</h1>
 	<div class="flex flex-col items-center pt-5">
-		{#if user}
-			<UserCard {user} />
-			<button
-				onclick={resetUser}
-				class="my-2 rounded-l bg-gray-300 px-6 py-2 font-bold text-gray-800 hover:bg-gray-400"
-				>Quit</button
-			>
-		{:else}
+{#if user}
+	<UserCard {user} {undoPurchase} {resetUser} />
+{:else}
 			<input
 				class="rounded-lg"
 				placeholder="UserID"
@@ -117,7 +118,7 @@
 			{#each store_items as item}
 				<ItemCard
 					{...item}
-					buy={() => updateBalance(item)}
+					buy={() => buyItem(item)}
 				/>
 			{/each}
 		</div>
