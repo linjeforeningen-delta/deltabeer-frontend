@@ -8,6 +8,8 @@
 - [ ] POST request if enough balance to remove amount from DB.
 - [ ] Deny purchase if user balance is not enough
 - [ ] User transaction history?
+- [ ] Add custom deduction (in case new item has not been added)
+- [ ] Password protected deposit page
 
 ## Installation
 
