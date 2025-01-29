@@ -10,6 +10,7 @@
 - [ ] User transaction history?
 - [ ] Add custom deduction (in case new item has not been added)
 - [ ] Password protected deposit page
+- [ ] Add PIN code verification for admins
 
 ## Installation
 
