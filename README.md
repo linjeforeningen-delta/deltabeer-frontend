@@ -1,5 +1,7 @@
 # Delta Shop Frontend
 
+![Dancing](https://media1.tenor.com/m/MkTexhggt6QAAAAd/rat-rat-dance.gif)
+
 > Web application used as a interface to add founds, and buy products from the Delta Store.
 
 ## TODO
