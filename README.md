@@ -9,10 +9,10 @@
 - [ ] Update user balance after buying a product
 - [ ] POST request if enough balance to remove amount from DB.
 - [ ] Deny purchase if user balance is not enough
-- [ ] User transaction history?
+- [ ] User transaction history
 - [ ] Add custom deduction (in case new item has not been added)
-- [ ] Password protected deposit page
-- [ ] Add PIN code verification for admins
+- [x] Password protected deposit page
+- [x] Add PIN code verification for admins
 
 ## Installation
 

@@ -6,9 +6,12 @@ export interface Item {
 }
 
 export interface User {
-	name: string;
+	userID: number | undefined;
+	cardID: number | undefined;
+	first_name: string | undefined;
+	last_name: string | undefined;
+	phone_nr: string | undefined;
 	balance: number;
-	id: number;
 }
 
 export interface ItemCard {
