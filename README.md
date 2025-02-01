@@ -13,6 +13,7 @@
 - [ ] Add custom deduction (in case new item has not been added)
 - [x] Password protected deposit page
 - [x] Add PIN code verification for admins
+- [ ] Add new admin on the admin page
 
 ## Installation
 
