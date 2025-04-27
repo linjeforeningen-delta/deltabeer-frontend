@@ -25,17 +25,17 @@
 	});
 
 	let store_items: Item[] = [
-		{ name: 'Dahls Sommerøl', price: 40, description: '0,5l boks', img: '/img/dahls_sommer.jpeg' },
+		{ name: 'Dahls Sommerøl', price: 40, description: '0,5l boks', img: '/img/dahls_sommer.png' },
 		{ name: 'Dahls', price: 34, description: '0,5l boks', img: '/img/dahls.png' },
-		{ name: 'Brooklyn Lager', price: 45, description: '0,5l boks', img: '/img/brooklyn.jpg' },
-		{ name: 'Dahls', price: 30, description: '0,33l boks', img: '/img/dahls_33.jpeg' },
-		{ name: 'Schous', price: 35, description: '0,5l boks', img: '/img/schous.jpg' },
-		{ name: 'Grevens', price: 40, description: '0,5l boks', img: '/img/grevens.jpg' },
-		{ name: 'Munkholm', price: 15, description: '0,33l boks', img: '/img/munkholm.jpg' },
+		{ name: 'Brooklyn Lager', price: 45, description: '0,5l boks', img: '/img/brooklyn.png' },
+		{ name: 'Dahls', price: 30, description: '0,33l boks', img: '/img/dahls_33.png' },
+		{ name: 'Schous', price: 35, description: '0,5l boks', img: '/img/schous.png' },
+		{ name: 'Grevens', price: 40, description: '0,5l boks', img: '/img/grevens.png' },
+		{ name: 'Munkholm', price: 15, description: '0,33l boks', img: '/img/munkholm.png' },
 		{ name: 'Radler', price: 20, description: '0,33l boks', img: '/img/radler.png' },
 		{ name: 'Juicy Ipa', price: 45, description: '0,5l boks', img: '/img/frydenlund_juicy.png' },
-		{ name: 'Austmann Blanc', price: 50, description: '0,5l boks', img: '/img/austmann_blanc.jpg' },
-		{ name: 'Smirnoff Ice', price: 40, description: '0,33l glass', img: '/img/smirnoff.jpg' },
+		{ name: 'Austmann Blanc', price: 50, description: '0,5l boks', img: '/img/austmann_blanc.png' },
+		{ name: 'Smirnoff Ice', price: 40, description: '0,33l glass', img: '/img/smirnoff.png' },
 		{ name: 'Crabbies', price: 53, description: '0,33l glass', img: '/img/crabbies.png' },
 		{ name: 'Grans Seltzer', price: 30, description: '0,5l boks', img: '/img/grans_seltzer.png' }
 	];
